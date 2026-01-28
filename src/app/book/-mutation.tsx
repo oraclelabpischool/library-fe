@@ -1,9 +1,10 @@
 import { fetchBook } from "@/service/bookServices"
+import { useQuery } from "@tanstack/react-query"
 
 export const useFetchBook = () => {
-    return {
-        mutationFn: fetchBook,
-        onSuccess: (res: any) => res,
-        onError: (err: any) => err
-    }
+
+    return useQuery({
+        queryFn: () => fetchBook(),
+        queryKey: ["list-book"]
+    })
 }

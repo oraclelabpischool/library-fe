@@ -1,5 +1,30 @@
 @import "tailwindcss";
 
+.table-base {
+  @apply w-full border border-gray-200 rounded-lg overflow-hidden text-sm;
+}
+
+.table-base thead {
+  @apply bg-gray-100 text-gray-700;
+}
+
+.table-base th {
+  @apply px-4 py-3 text-left font-semibold border-b;
+}
+
+.table-base td {
+  @apply px-4 py-3 border-b text-gray-600;
+}
+
+.table-base tbody tr {
+  @apply hover:bg-gray-50 transition;
+}
+
+.table-base tbody tr:last-child td {
+  @apply border-none;
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

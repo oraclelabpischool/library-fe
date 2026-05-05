@@ -6,7 +6,7 @@ import { BookType } from "./type"
 
 const Book = () => {
 
-  const { data, isLoading, isSuccess } = useFetchBook()
+  const { data, isLoading } = useFetchBook()
 
   return (
     <>
@@ -18,7 +18,7 @@ const Book = () => {
         </div>
       }
       {
-        isSuccess &&
+        !isLoading &&
         <div className="container pt-4">
           <h2 className="text-3xl text-center my-3">
             List Book
